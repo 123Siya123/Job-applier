@@ -170,9 +170,22 @@ class Settings(BaseSettings):
     search_params_path: Path = Path("config/search_params.json")
 
     # --- Brain ---
+    # Either a single key (`GEMINI_API_KEY`) or comma-separated keys
+    # (`GEMINI_API_KEYS`). Multiple keys enable round-robin + automatic
+    # failover when one hits quota — see GeminiClient.
     gemini_api_key: str = "missing-key"
+    gemini_api_keys: str = ""
     gemini_model: str = "gemini-3.1-pro"
     gemini_vision_model: str = "gemini-3.1-pro"
+
+    def gemini_key_list(self) -> list[str]:
+        if self.gemini_api_keys:
+            keys = [k.strip() for k in self.gemini_api_keys.split(",") if k.strip()]
+            if keys:
+                return keys
+        if self.gemini_api_key and self.gemini_api_key != "missing-key":
+            return [self.gemini_api_key]
+        return []
 
     # --- Actor ---
     actor_backend: ActorBackend = ActorBackend.PLAYWRIGHT
