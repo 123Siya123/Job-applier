@@ -1,0 +1,75 @@
+{
+  "job_types": ["Praktikum", "Werkstudent"],
+  "fields": [
+    "Mechatronik",
+    "Automatisierungstechnik",
+    "Automotive",
+    "Robotik"
+  ],
+  "primary_location": {
+    "city": "Frankfurt am Main",
+    "radius_km": 50
+  },
+
+  "relaxation_strategy": {
+    "enabled": true,
+    "stages": [
+      {
+        "name": "primary_radius",
+        "trigger": "saturated_companies >= 30",
+        "expand_radius_km": 100
+      },
+      {
+        "name": "germany_wide",
+        "trigger": "saturated_companies >= 60",
+        "geo_scope": "DE"
+      },
+      {
+        "name": "europe_wide",
+        "trigger": "saturated_companies >= 90",
+        "geo_scope": "EU"
+      },
+      {
+        "name": "global",
+        "trigger": "saturated_companies >= 120",
+        "geo_scope": "GLOBAL"
+      },
+      {
+        "name": "loosen_job_type",
+        "trigger": "saturated_companies >= 150",
+        "extra_job_types": ["Vollzeit", "Junior"]
+      }
+    ]
+  },
+
+  "search_keywords": {
+    "abstract_queries": [
+      "Robotik Startups in {city}",
+      "Automotive Zulieferer {region}",
+      "Industrie 4.0 Mittelstand {city}",
+      "Mechatronik Maschinenbau {city}",
+      "Automatisierung Anbieter {region}"
+    ],
+    "platform_queries": [
+      "site:indeed.de Werkstudent Mechatronik {city}",
+      "site:linkedin.com/jobs Praktikum Robotik {city}",
+      "site:stepstone.de Werkstudent Automatisierung {city}"
+    ]
+  },
+
+  "neighbouring_cities_seed": [
+    "Frankfurt am Main",
+    "Offenbach",
+    "Mainz",
+    "Wiesbaden",
+    "Darmstadt",
+    "Hanau",
+    "Aschaffenburg",
+    "Friedberg"
+  ],
+
+  "target_company_count": 50,
+
+  "blacklist_companies": [],
+  "blacklist_domains": ["*.example-spam.com"]
+}

@@ -1,0 +1,64 @@
+{
+  "personal": {
+    "first_name": "Max",
+    "last_name": "Mustermann",
+    "email": "max.mustermann@example.com",
+    "phone": "+49 170 1234567",
+    "address": {
+      "street": "Beispielstraße 1",
+      "postal_code": "60311",
+      "city": "Frankfurt am Main",
+      "country": "Deutschland"
+    },
+    "date_of_birth": "2001-05-14",
+    "nationality": "Deutsch",
+    "linkedin": "https://www.linkedin.com/in/max-mustermann",
+    "github": "https://github.com/max-mustermann",
+    "languages": [
+      {"language": "Deutsch", "level": "Muttersprache"},
+      {"language": "Englisch", "level": "C1"}
+    ]
+  },
+
+  "education": [
+    {
+      "degree": "B.Sc. Mechatronik",
+      "institution": "TU Darmstadt",
+      "start": "2022-10",
+      "end": null,
+      "gpa": "1.8"
+    }
+  ],
+
+  "experience": [
+    {
+      "title": "Werkstudent Robotik",
+      "company": "Beispiel Robotics GmbH",
+      "start": "2023-04",
+      "end": "2024-09",
+      "description": "Entwicklung von ROS2-Treibern für 6-Achs-Roboter, Inbetriebnahme von SPS-Schnittstellen."
+    }
+  ],
+
+  "skills": {
+    "hard": ["Python", "C++", "ROS2", "MATLAB/Simulink", "SolidWorks", "PLC (Codesys)"],
+    "soft": ["Selbstständige Arbeitsweise", "Teamfähigkeit", "Analytisches Denken"]
+  },
+
+  "files": {
+    "cv_path": "C:\\Users\\Max\\Documents\\Bewerbung\\Lebenslauf_Max_Mustermann.pdf",
+    "cover_letter_template_path": "C:\\Users\\Max\\Documents\\Bewerbung\\Anschreiben_Vorlage.pdf",
+    "transcript_path": "C:\\Users\\Max\\Documents\\Bewerbung\\Notenspiegel.pdf",
+    "certificates_dir": "C:\\Users\\Max\\Documents\\Bewerbung\\Zeugnisse"
+  },
+
+  "self_description": "Mechatronik-Student im 5. Semester an der TU Darmstadt mit starkem Fokus auf Robotik und Automatisierungstechnik. Praxiserfahrung in ROS2, Echtzeitsteuerung und industrieller Inbetriebnahme. Suche eine Werkstudenten- oder Praktikumsstelle, um theoretisches Wissen in einer industriellen R&D-Umgebung anzuwenden — idealerweise im Raum Frankfurt am Main.",
+
+  "preferences": {
+    "earliest_start": "2026-06-01",
+    "min_weekly_hours": 10,
+    "max_weekly_hours": 20,
+    "remote_ok": true,
+    "willing_to_relocate": false
+  }
+}

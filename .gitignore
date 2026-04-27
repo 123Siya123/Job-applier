@@ -1,0 +1,34 @@
+# --- Secrets / runtime data ---
+.env
+data/applier.sqlite3
+data/applier.sqlite3-journal
+data/screenshots/
+data/applier.log
+data/uploads/
+
+# --- User config (real, not example) ---
+config/profile.json
+config/search_params.json
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.venv/
+venv/
+env/
+*.egg-info/
+.pytest_cache/
+.ruff_cache/
+
+# --- Playwright ---
+playwright-report/
+test-results/
+
+# --- OS / IDE ---
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

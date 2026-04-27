@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8" />
+    <title>Job-Applier — Live Dashboard</title>
+    <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+    <header>
+        <h1>Job-Applier <span class="muted">— Live Dashboard</span></h1>
+        <div class="progress-wrap">
+            <div id="progress-bar" class="progress-bar"></div>
+            <div id="progress-label" class="progress-label">0 / 50 Unternehmen</div>
+        </div>
+    </header>
+
+    <section class="metrics">
+        <div class="metric"><div class="value" id="m-applied">0</div><div class="label">Applied</div></div>
+        <div class="metric"><div class="value" id="m-confirmed">0</div><div class="label">Confirmed</div></div>
+        <div class="metric"><div class="value" id="m-interview">0</div><div class="label">Interview</div></div>
+        <div class="metric"><div class="value" id="m-rejected">0</div><div class="label">Rejected</div></div>
+        <div class="metric"><div class="value" id="m-offer">0</div><div class="label">Offer</div></div>
+        <div class="metric"><div class="value" id="m-failed">0</div><div class="label">Failed</div></div>
+    </section>
+
+    <main>
+        <section class="panel">
+            <h2>Unternehmen</h2>
+            <div id="companies" class="company-grid"></div>
+        </section>
+
+        <aside class="panel">
+            <h2>Live-Aktivität</h2>
+            <ul id="events" class="events"></ul>
+        </aside>
+    </main>
+
+    <script src="/static/app.js"></script>
+</body>
+</html>

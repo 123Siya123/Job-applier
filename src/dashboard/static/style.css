@@ -1,0 +1,139 @@
+:root {
+    --bg: #0f172a;
+    --bg-2: #1e293b;
+    --fg: #e2e8f0;
+    --muted: #94a3b8;
+    --accent: #38bdf8;
+    --green: #22c55e;
+    --amber: #f59e0b;
+    --red: #ef4444;
+    --violet: #a78bfa;
+    --shadow: 0 6px 24px rgba(0, 0, 0, 0.35);
+}
+
+* { box-sizing: border-box; }
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--fg);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
+                 Arial, "Noto Sans", sans-serif;
+    font-size: 14px;
+}
+
+header {
+    padding: 24px 32px 12px;
+    border-bottom: 1px solid #1f2a44;
+}
+
+header h1 { margin: 0 0 12px 0; font-weight: 600; font-size: 22px; }
+.muted { color: var(--muted); font-weight: 400; }
+
+.progress-wrap {
+    position: relative;
+    background: var(--bg-2);
+    border-radius: 999px;
+    height: 22px;
+    overflow: hidden;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.4);
+}
+.progress-bar {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, var(--accent), var(--violet));
+    transition: width 0.6s ease;
+}
+.progress-label {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 12px;
+    letter-spacing: 0.4px;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+.metrics {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 12px;
+    padding: 18px 32px;
+}
+.metric {
+    background: var(--bg-2);
+    border: 1px solid #243047;
+    border-radius: 10px;
+    padding: 14px;
+    text-align: center;
+    box-shadow: var(--shadow);
+}
+.metric .value { font-size: 28px; font-weight: 700; }
+.metric .label { color: var(--muted); margin-top: 2px; font-size: 11px; text-transform: uppercase; letter-spacing: 1px; }
+
+main {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 16px;
+    padding: 0 32px 32px;
+}
+
+.panel {
+    background: var(--bg-2);
+    border: 1px solid #243047;
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: var(--shadow);
+}
+.panel h2 { margin: 0 0 14px; font-size: 14px; text-transform: uppercase; letter-spacing: 1px; color: var(--muted); }
+
+.company-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 10px;
+    max-height: 70vh;
+    overflow-y: auto;
+}
+.company {
+    background: #111c33;
+    border: 1px solid #2a385a;
+    border-radius: 8px;
+    padding: 10px 12px;
+}
+.company .name { font-weight: 600; }
+.company .meta { color: var(--muted); font-size: 11px; margin-top: 2px; }
+.company .jobs { margin-top: 6px; padding-left: 12px; border-left: 2px solid #2a385a; }
+.company .jobs li { font-size: 12px; padding: 2px 0; }
+
+.status-pill { display: inline-block; padding: 2px 8px; border-radius: 999px; font-size: 10px; font-weight: 600; letter-spacing: 0.5px; text-transform: uppercase; margin-left: 6px; }
+.status-discovered  { background: #2a385a; color: #cbd5e1; }
+.status-qualified   { background: #1e3a5f; color: #93c5fd; }
+.status-in_progress { background: #4c1d95; color: #c4b5fd; }
+.status-applied     { background: #14532d; color: #bbf7d0; }
+.status-schon_fuer_alles_beworben { background: #1f2937; color: var(--muted); }
+.status-skipped     { background: #312e81; color: #c7d2fe; }
+.status-error       { background: #7f1d1d; color: #fecaca; }
+
+.app-status-applied      { color: #93c5fd; }
+.app-status-confirmed    { color: var(--green); }
+.app-status-interview_invitation { color: var(--violet); }
+.app-status-rejected     { color: var(--red); }
+.app-status-offer        { color: #fde047; }
+.app-status-failed       { color: var(--red); }
+.app-status-new          { color: var(--muted); }
+
+.events {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    max-height: 70vh;
+    overflow-y: auto;
+}
+.events li {
+    padding: 8px 10px;
+    border-bottom: 1px solid #1f2a44;
+    font-size: 12px;
+}
+.events li .time { color: var(--muted); margin-right: 8px; font-variant-numeric: tabular-nums; }
+.events li .agent { color: var(--accent); font-weight: 600; }
